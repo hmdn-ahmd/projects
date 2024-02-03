@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <link erl="stylesheet" href ="/css/styles.css">
-</head>
-<body>
-    <div class=" main-content">
-        {{header}}
-        <article class="widget">
-            <form class="weatherLacations">
-                <input class="input-field" type="text" palceholder="Enter your city"/>
-                <button class="search-button">Search</button>
-            </form>
-            <div class="icon-and-weatherInfo">
-            <div class="weatherIcon">
-                <i>
-                </i>
-            </div>
-            <div class="weatherInfo">
-                <div class="temperature"><span></span></div>
-                <div class="weatherCondition"></div>
-            </div>
-            <div class="place"></div>
-            <di class="date"></div>
-        </article>
-    </div>
-
-    <script type="text/javascript" src="js/app.js"></script>
-</body>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="css/styles.css"/> <!-- static path for public folder is already set in app.js -->
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <article class="widget">
+                <form class="weatherLocation"><input class="input-field" placeholder="Enter city name" type = "text"/><button class="search-button">Seach</button>
+                </form>
+                <div class="icon-and-weatherInfo">
+                    <div class="weatherIcon"><i></i></div>
+                    <div class="weatherInfo">
+                         <div class="temperature"><span></span></div>
+                        <div class="weatherCondition"></div> 
+                    </div>
+                </div>
+                <div class="place"></div>
+                <div class="date"></div>
+            </article>
+        </div>
+        <script src="js/app.js"></script> <!-- absolute path -->
+    </body>
 </html>
